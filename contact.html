@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – YourCrushAI</title>
+  <meta name="description" content="Get in touch with YourCrushAI for questions, feedback, or collaboration ideas about AI and technology." />
+  <meta name="keywords" content="contact YourCrushAI, AI blog contact" />
+  <meta name="author" content="YourCrushAI" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact – YourCrushAI" />
+  <meta property="og:description" content="Reach out to YourCrushAI for AI questions, feedback, or collaboration ideas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourcrushai.com/contact.html" />
+  <meta property="og:image" content="https://yourcrushai.com/og-image.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact – YourCrushAI" />
+  <meta name="twitter:description" content="Reach out to YourCrushAI for AI questions, feedback, or collaboration ideas." />
+  <meta name="twitter:image" content="https://yourcrushai.com/og-image.jpg" />
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .sticky-nav { position: sticky; top: 0; z-index: 1000; }
+    .nav-menu { transition: transform 0.3s ease; }
+    .nav-menu.hidden { transform: translateX(-100%); }
+    .nav-menu { position: fixed; top: 0; left: 0; height: 100%; width: 75%; max-width: 250px; background: #4f46e5; padding: 1rem; }
+    @media (min-width: 640px) {
+      .nav-toggle { display: none; }
+      .nav-menu { position: static; transform: none; width: auto; background: none; padding: 0; display: flex !important; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-indigo-600 text-white py-3 sticky-nav shadow">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <button class="nav-toggle sm:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <a href="index.html" class="text-xl sm:text-2xl font-bold">YourCrushAI</a>
+      <div class="nav-menu hidden sm:flex space-x-4 sm:space-x-6 flex-col sm:flex-row bg-indigo-600 sm:bg-transparent pt-12 sm:pt-0">
+        <a href="index.html" class="hover:text-gray-200 text-sm sm:text-base py-2 sm:py-0">Home</a>
+        <a href="blog.html" class="hover:text-gray-200 text-sm sm:text-base py-2 sm:py-0">Blog</a>
+        <a href="about.html" class="hover:text-gray-200 text-sm sm:text-base py-2 sm:py-0">About</a>
+        <a href="contact.html" class="hover:text-gray-200 text-sm sm:text-base py-2 sm:py-0">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="container mx-auto px-4 py-8 sm:py-12">
+    <h1 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-4 text-center">Get in Touch</h1>
+    <p class="text-base sm:text-lg max-w-2xl mx-auto mb-8 text-center">Have questions about AI, feedback on our blog, or collaboration ideas? We’d love to hear from you! Use the form below or reach out via email or social media.</p>
+
+    <!-- Contact Form -->
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+          <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg focus:outline-none focus:border-indigo-500" required />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg focus:outline-none focus:border-indigo-500" required />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full p-3 border rounded-lg focus:outline-none focus:border-indigo-500" required></textarea>
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="text-center mt-8">
+      <p class="text-gray-600 text-sm sm:text-base mb-2">Email: <a href="mailto:contact@yourcrushai.com" class="text-indigo-600 hover:underline">contact@yourcrushai.com</a></p>
+      <p class="text-gray-600 text-sm sm:text-base">Follow: <a href="https://linkedin.com/company/yourcrushai" class="text-indigo-600 hover:underline">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">© 2025 YourCrushAI. All rights reserved.</p>
+      <div class="mt-2 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-sm">
+        <a href="privacy.html" class="hover:text-gray-200">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-gray-200">Terms of Service</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+        <a href="https://linkedin.com/company/yourcrushai" class="hover:text-gray-200">LinkedIn</a>
+      </div>
+      <p class="mt-2 text-sm">Made with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

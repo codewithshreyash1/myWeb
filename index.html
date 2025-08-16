@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YourCrushAI – Learn AI & Tech with Shreyash</title>
-  <meta name="description" content="YourCrushAI by Shreyash – daily AI insights, tutorials, and guides to help students, beginners, and curious minds learn AI, technology, and digital skills." />
-  <meta name="keywords" content="AI tutorials, learn AI, AI tools, technology blog, coding, machine learning, YourCrushAI, Shreyash AI" />
-  <meta name="author" content="Shreyash" />
+  <title>Learn AI with YourCrushAI – Tech Blog for Beginners</title>
+  <meta name="description" content="YourCrushAI – daily AI insights, tutorials, and guides for students, beginners, and curious minds to learn AI and technology." />
+  <meta name="keywords" content="AI tutorials, learn AI, AI tools, technology blog, coding, machine learning, YourCrushAI" />
+  <meta name="author" content="YourCrushAI" />
 
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="YourCrushAI – Learn AI & Tech with Shreyash" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Learn AI with YourCrushAI – Tech Blog for Beginners" />
   <meta property="og:description" content="Daily AI guides, tools, and tutorials to help you learn AI and modern technology easily." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yourcrushai.com" />
@@ -17,38 +17,89 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="YourCrushAI – Learn AI & Tech with Shreyash" />
+  <meta name="twitter:title" content="Learn AI with YourCrushAI – Tech Blog for Beginners" />
   <meta name="twitter:description" content="Daily AI guides, tools, and tutorials to help you learn AI and modern technology easily." />
   <meta name="twitter:image" content="https://yourcrushai.com/og-image.jpg" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YourCrushAI",
+    "url": "https://yourcrushai.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourcrushai.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .sticky-nav { position: sticky; top: 0; z-index: 1000; }
+    .nav-menu { transition: transform 0.3s ease; }
+    .nav-menu.hidden { transform: translateX(-100%); }
+    .nav-menu { position: fixed; top: 0; left: 0; width: 55%; max-width: 180px; height: auto; min-height: fit-content; max-height: 40vh; background: linear-gradient(to bottom, #4f46e5, #a855f7); padding: 1rem; z-index: 1001; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0 12px 12px 0; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; }
+    .nav-menu a { display: block; white-space: nowrap; }
+    .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; }
+    .nav-overlay.hidden { display: none; }
+    .nav-toggle { position: relative; width: 26px; height: 26px; background: none; border: none; cursor: pointer; }
+    .nav-toggle .icon-bar { display: block; width: 20px; height: 2px; background: white; margin: 4px 0; transition: all 0.3s ease; }
+    .nav-toggle.active .icon-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.active .icon-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle.active .icon-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .nav-close { position: absolute; top: 4px; left: 4px; z-index: 1002; }
+    .nav-close:hover { transform: scale(1.1); }
+    @media (min-width: 640px) {
+      .nav-toggle, .nav-overlay, .nav-close { display: none; }
+      .nav-menu { position: static; transform: none; width: auto; height: auto; max-height: none; background: none; padding: 0; display: flex !important; box-shadow: none; border-radius: 0; flex-direction: row; justify-content: flex-start; }
+      .nav-menu a { display: inline; white-space: normal; }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3S9KK1456"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L3S9KK1456');
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  
 
   <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to YourCrushAI</h1>
-    <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto leading-relaxed">
-      Hi, I’m <strong>Shreyash</strong> — a solo creator on a mission to make AI and technology easy for everyone.
-      I share daily posts, resources, and practical tips to help you learn and grow in the world of AI.
+  <section class="text-center py-8 sm:py-12 bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Learn AI with YourCrushAI</h1>
+    <p class="text-base sm:text-lg md:text-xl mb-6 max-w-full sm:max-w-2xl mx-auto leading-relaxed px-4">
+      Welcome to <strong>YourCrushAI</strong> — a blog dedicated to making AI and technology simple for students, beginners, and curious minds. Explore daily posts, tutorials, and practical tips to kickstart your AI journey.
     </p>
-    <a href="#about" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition">
+    <a href="#about" class="bg-white text-indigo-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition">
       Learn More
     </a>
   </section>
 
   <!-- My Goal Section -->
   <section class="py-16 container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">My Mission & Goal</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">Our Mission & Goal</h2>
     <div class="bg-white p-6 rounded-lg shadow max-w-3xl mx-auto text-center">
-      <p class="text-lg leading-relaxed">
-        My goal is simple — to help <strong>students, beginners, and curious minds</strong> understand AI and modern technology.
-        I believe AI should be accessible to everyone, and through <strong>daily blogs, guides, and tool reviews</strong>,
-        I aim to make learning AI practical, simple, and fun.
+      <p class="text-base sm:text-lg leading-relaxed">
+        The mission of <strong>YourCrushAI</strong> is to make AI and tech accessible for students, beginners, and curious minds. Through <strong>daily blogs, guides, and tool reviews</strong>, we break down complex concepts into simple, actionable steps.
       </p>
       <p class="mt-4 text-indigo-600 font-semibold">
         📅 Current Goal: Publish 30 AI & tech blog posts in 30 days.
@@ -59,45 +110,68 @@
   <!-- Latest Posts -->
   <section class="bg-gray-100 py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Latest Blog Posts</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">Latest Blog Posts</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        
-        <!-- Post Card -->
-        <a href="#" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Day 1 – Introduction to AI</h3>
-          <p class="text-sm text-gray-600">Understanding what AI really is and how it’s shaping the future.</p>
+        <a href="ai-future-blog.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Artificial Intelligence in 2025: Shaping the Future</h3>
+          <p class="text-sm text-gray-600">Explore how AI is transforming technology, business, and society in 2025.</p>
         </a>
-
-        <a href="#" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Day 2 – Top Free AI Tools</h3>
-          <p class="text-sm text-gray-600">A curated list of free AI tools for students and developers.</p>
+        <a href="blog.html#free-ai-tools" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Top Free AI Tools for Students in 2025</h3>
+          <p class="text-sm text-gray-600">A curated list of free AI tools to boost your learning and projects.</p>
         </a>
-
-        <a href="#" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Day 3 – AI in Daily Life</h3>
-          <p class="text-sm text-gray-600">Practical examples of AI you’re already using without realizing it.</p>
+        <a href="blog.html#ai-daily-life" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">AI in Daily Life: How It’s Already Around You</h3>
+          <p class="text-sm text-gray-600">Discover practical examples of AI in your everyday activities.</p>
         </a>
-
+      </div>
+      <div class="text-center mt-8">
+        <a href="blog.html" class="bg-indigo-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+          View All Posts
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- About Me -->
+  <!-- About Section -->
   <section id="about" class="py-16 container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
-    <p class="max-w-3xl mx-auto text-center leading-relaxed">
-      I’m Shreyash, the person behind <strong>YourCrushAI</strong>. I’m passionate about simplifying AI concepts and showing real-world use cases for learners at all levels.
-      I run this blog alone — writing, researching, and designing content every day. Whether you’re a beginner or exploring advanced AI tools, my aim is to guide you step-by-step.
-    </p>
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-6">About YourCrushAI</h2>
+    <div class="max-w-3xl mx-auto text-center leading-relaxed">
+      <p class="mb-4 text-base sm:text-lg">YourCrushAI is a blog created to simplify AI and technology for students, beginners, and curious minds. With a passion for teaching, we share daily insights, tutorials, and practical tips to help you understand and use AI in a fun, approachable way.</p>
+      <p class="mb-4 text-base sm:text-lg">This is a solo project driven by a love for learning and sharing knowledge. Whether you’re new to tech or exploring advanced tools, we’re here to guide you every step of the way. Have questions or ideas? Let’s connect!</p>
+      <a href="contact.html" class="inline-block bg-indigo-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+        Connect with Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="max-w-2xl mx-auto mb-6 text-base sm:text-lg">Have questions about AI or want to share feedback? Reach out via email or follow on social media!</p>
+      <a href="contact.html" class="inline-block bg-indigo-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+        Contact Us
+      </a>
+      <p class="mt-4 text-gray-600 text-sm sm:text-base">Email: <a href="mailto:contact@yourcrushai.com" class="text-indigo-600 hover:underline">contact@yourcrushai.com</a></p>
+      <p class="mt-2 text-gray-600 text-sm sm:text-base">Follow: <a href="https://linkedin.com/company/yourcrushai" class="text-indigo-600 hover:underline">LinkedIn</a></p>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 YourCrushAI by Shreyash. All rights reserved.</p>
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">© 2025 YourCrushAI. All rights reserved.</p>
+      <div class="mt-2 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-sm">
+        <a href="privacy.html" class="hover:text-gray-200">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-gray-200">Terms of Service</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+        <a href="https://linkedin.com/company/yourcrushai" class="hover:text-gray-200">LinkedIn</a>
+      </div>
       <p class="mt-2 text-sm">Made with ❤️ for learners worldwide.</p>
     </div>
   </footer>
 
+  
 </body>
 </html>
